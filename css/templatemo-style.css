@@ -1,0 +1,727 @@
+/* 
+   Akademi PSIM Yogyakarta — psim-style.css
+   Tema biru PSIM Yogyakarta
+   Dibuat oleh Raid Haidar
+
+TABLE OF CONTENT
+    1. Universal Styles
+    2. Header
+    3. Beranda
+    4. Tentang & Footer
+    5. Pemain
+    6. Lokasi & Maps
+    7. Video Section
+    8. Placeholder Gambar (hapus saat foto asli sudah siap)
+    9. Media Queries
+----------------------------------------------*/
+
+/* === WARNA UTAMA PSIM ===
+   --biru-utama    : #003B7A   (biru tua PSIM)
+   --biru-muda     : #1565C0   (biru cerah aksen)
+   --biru-terang   : #42A5F5   (highlight)
+   --emas-psim     : #F5C518   (aksen kuning/emas logo PSIM)
+   --gelap         : #0D1B2A   (latar gelap)
+   ====================== */
+
+/* 1. Universal Styles
+----------------------------------------------*/
+:root {
+    --biru-utama: #003B7A;
+    --biru-muda: #1565C0;
+    --biru-terang: #42A5F5;
+    --emas-psim: #F5C518;
+    --gelap: #0D1B2A;
+    --abu-terang: #EFEFEF;
+    --abu-teks: #838383;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+* { font-family: 'Open Sans', sans-serif; }
+
+body { font-size: 14px; }
+
+.templatemo-container {
+    margin: 0 auto;
+    max-width: 1600px;
+    overflow: hidden;
+}
+
+.blue-text { color: var(--biru-terang); }
+.white-text { color: white; }
+.gray-text { color: var(--abu-teks); }
+
+.mobile-menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+a { color: var(--biru-terang); }
+a:hover {
+    color: var(--emas-psim);
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 3.4em;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-family: 'Barlow Condensed', 'Open Sans', sans-serif;
+}
+
+section { padding: 50px 0; }
+
+.templatemo-section-header-hr {
+    border-top-color: var(--biru-muda);
+    width: 185px;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+}
+
+.templatemo-section-subheader {
+    color: var(--biru-muda);
+    display: inline-block;
+    margin-bottom: 60px;
+}
+
+.templatemo-gray-bg { background: var(--abu-terang); }
+
+.templatemo-dark-bg {
+    background: var(--gelap);
+    color: #DDD;
+}
+
+.margin-bottom-10 { margin-bottom: 10px; }
+
+/* Banner pendaftaran */
+.daftar-banner {
+    background: var(--biru-utama);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+}
+.daftar-banner a {
+    color: var(--emas-psim);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.daftar-banner a:hover { color: #fff; }
+
+/* 2. Header
+----------------------------------------------*/
+.templatemo-block-left { width: 40%; }
+.templatemo-block-right { width: 60%; }
+
+.templatemo-block-left,
+.templatemo-block-right { float: left; }
+
+.templatemo-header-left,
+.templatemo-header-right { height: 450px; }
+
+.templatemo-header-left {
+    /* GANTI GAMBAR: ganti path di bawah ini dengan foto banner utama kamu */
+    background: url(../img/psim1.jpeg) center center no-repeat;
+    background-size: cover;
+    background-color: var(--gelap); /* fallback jika gambar belum ada */
+    color: #fff;
+    position: relative;
+}
+
+.templatemo-header-left-overlay {
+    background-color: rgba(0, 20, 50, 0.82);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.templatemo-header-right {
+    /* GANTI GAMBAR: ganti path di bawah ini dengan foto header kanan kamu */
+    background: url(../img/psim2.jpeg) center center no-repeat;
+    background-size: cover;
+    background-color: var(--biru-utama); /* fallback jika gambar belum ada */
+}
+
+.templatemo-header-right-overlay {
+    background-color: rgba(0, 59, 122, 0.45);
+    height: 100%;
+    width: 100%;
+}
+
+.templatemo-header-text-wrap {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+.templatemo-header-text {
+    margin-right: 50px;
+    text-align: right;
+    width: 100%;
+}
+
+.templatemo-site-name {
+    letter-spacing: 3px;
+    font-size: 45px;
+    font-family: 'Barlow Condensed', 'Open Sans', sans-serif;
+    font-weight: 900;
+}
+
+.templatemo-header-hr {
+    border-top-color: #6fa8d4;
+    width: 71px;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+}
+
+.templatemo-slogan {
+    color: #a8c8e8;
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+/* Navigasi */
+.templatemo-social,
+.templatemo-nav {
+    height: 60px;
+    width: 100%;
+}
+
+.templatemo-social {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    padding-right: 30px;
+    background: #1a1a2e;
+}
+
+.templatemo-social li { margin-right: 20px; }
+
+.templatemo-social a {
+    color: white;
+    font-size: 1.4em;
+}
+
+.templatemo-social i {
+    background: var(--biru-muda);
+    border-radius: 30px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.templatemo-social a:hover i {
+    background: var(--emas-psim);
+    color: var(--gelap);
+}
+
+.templatemo-nav { background: var(--gelap); }
+.templatemo-nav li { line-height: 60px; }
+
+.templatemo-nav a {
+    color: var(--biru-terang);
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.templatemo-nav a:hover { text-decoration: none; }
+
+.templatemo-nav li.active a,
+.templatemo-nav a:hover {
+    background: var(--biru-utama);
+    color: var(--emas-psim);
+}
+
+.templatemo-social li,
+.templatemo-nav li {
+    display: inline-block;
+    float: left;
+}
+
+/* 3. Beranda
+----------------------------------------------*/
+
+/* Program Unggulan */
+.new-arrival-container {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+}
+
+.new-arrival-overlay {
+    background: rgba(0, 59, 122, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.new-arrival-title {
+    color: rgb(237, 237, 237);
+    font-size: 2.6em;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.new-arrival-title span {
+    display: block;
+    text-align: center;
+}
+
+.new-arrival-title .smaller-text {
+    font-size: 0.5em;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.font-script { font-family: 'Dancing Script', cursive; }
+
+.bordered-text {
+    border: 1px solid #fff;
+    padding: 5px 10px;
+}
+
+/* Fasilitas */
+.product-type-container {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 15px;
+    max-width: 100%;
+}
+
+.product-type-overlay {
+    cursor: pointer;
+    position: absolute;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 30, 80, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.product-type-container:hover .product-type-img {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+.product-type-container:hover .product-type-overlay { opacity: 1; }
+
+.product-type-info {
+    border: 1px solid var(--biru-terang);
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.product-type-info h3 { font-size: 1.1em; }
+
+.product-type-info .fa {
+    border: 2px solid var(--biru-terang);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding-top: 9px;
+}
+
+.product-type-message {
+    background: #fff;
+    border: 1px solid var(--biru-muda);
+    padding: 50px;
+}
+
+.blue-border {
+    border: 1px solid var(--biru-muda);
+    padding: 10px;
+}
+
+.product-type-message p {
+    line-height: 1.8;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.product-type-message-title { margin-top: 0; }
+
+/* Pemain & Skuad */
+.img-fashion {
+    max-width: 209px;
+    max-height: 209px;
+}
+
+.product-menu {
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.product-menu li {
+    background: var(--gelap);
+    display: inline-block;
+    line-height: 60px;
+    list-style: none;
+    float: left;
+}
+
+.product-menu a {
+    color: var(--biru-terang);
+    width: 90px;
+    height: 60px;
+    padding: 20px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 1px;
+}
+
+.product-menu li.active a,
+.product-menu a:hover {
+    background: var(--biru-utama);
+    color: var(--emas-psim);
+}
+
+.btn-gray-bordered {
+    border: 2px solid #D1D1D1;
+    color: #8F8E8E;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-gray-bordered:hover {
+    border-color: var(--biru-muda);
+    color: var(--biru-muda);
+}
+
+/* 4. Tentang & Footer
+----------------------------------------------*/
+.templatemo-about-hr {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    border-top-color: var(--biru-terang);
+}
+
+.templatemo-about-subtitle {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    color: #aaa;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.about-us-text {
+    line-height: 1.8em;
+    margin: 80px auto 40px auto;
+    max-width: 800px;
+}
+
+footer {
+    background: var(--gelap);
+    color: #aaa;
+    font-size: 0.8em;
+    padding: 20px;
+    border-top: 3px solid var(--biru-utama);
+}
+
+footer a {
+    color: var(--biru-terang);
+}
+
+footer a:hover { color: var(--emas-psim); }
+
+/* 5. Video Section
+----------------------------------------------*/
+.video-section { padding: 60px 0; }
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* rasio 16:9 */
+    height: 0;
+    overflow: hidden;
+    border: 3px solid var(--biru-muda);
+    box-shadow: 0 8px 32px rgba(0, 59, 122, 0.5);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 6. Lokasi & Maps
+----------------------------------------------*/
+.lokasi-section {
+    padding: 60px 0;
+    background: #f7f9fc;
+}
+
+.lokasi-info {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.kontak-detail {
+    padding: 20px 30px 20px 0;
+}
+
+.kontak-detail h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.kontak-detail h4:first-child { margin-top: 0; }
+
+.kontak-detail p {
+    color: var(--abu-teks);
+    line-height: 1.8;
+    font-size: 0.9em;
+}
+
+.maps-wrapper {
+    border: 3px solid var(--biru-muda);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 59, 122, 0.15);
+}
+
+.maps-wrapper iframe {
+    display: block;
+}
+
+/* 7. Login Item di Navbar
+----------------------------------------------*/
+.nav-login-item {
+    display: inline-flex !important;
+    float: left;
+    align-items: center;
+    gap: 10px;
+    padding: 0 15px;
+    line-height: 60px;
+    height: 60px;
+}
+
+.user-info-text {
+    color: #a8c8e8;
+    font-size: 0.78em;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    white-space: nowrap;
+}
+
+.btn-login {
+    background: var(--emas-psim);
+    color: var(--gelap);
+    border: none;
+    border-radius: 30px;
+    padding: 6px 18px;
+    font-size: 0.78em;
+    font-weight: 700;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.btn-login:hover {
+    background: #fff;
+    color: var(--biru-utama);
+}
+
+/* 8. Placeholder Gambar
+   Hapus bagian ini setelah foto asli sudah terpasang
+----------------------------------------------*/
+.program-img-placeholder {
+    width: 100%;
+    min-height: 220px;
+    background: linear-gradient(135deg, var(--biru-utama) 0%, var(--biru-muda) 100%);
+    display: block;
+    object-fit: cover;
+}
+
+.facility-img-placeholder {
+    width: 100%;
+    min-height: 160px;
+    background: linear-gradient(135deg, #1a2744 0%, var(--biru-muda) 100%);
+    display: block;
+    object-fit: cover;
+}
+
+.player-img-placeholder {
+    width: 180px;
+    height: 200px;
+    background: linear-gradient(160deg, var(--gelap) 0%, var(--biru-utama) 100%);
+    display: inline-block;
+    object-fit: cover;
+}
+
+/* 8. Pagination
+----------------------------------------------*/
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background-color: var(--biru-utama);
+    border-color: var(--biru-utama);
+}
+
+.pagination>li>a,
+.pagination>li>span { color: var(--biru-muda); }
+
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover { color: var(--biru-utama); }
+
+/* 9. Media Queries
+----------------------------------------------*/
+@media screen and (max-width: 991px) {
+    .templatemo-header-left,
+    .templatemo-header-right { height: 300px; }
+
+    .templatemo-site-name { font-size: 36px; }
+    .templatemo-header-hr { width: 45px; }
+
+    .templatemo-slogan {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .lokasi-info {
+        margin-bottom: 30px;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .templatemo-block-left,
+    .templatemo-block-right {
+        float: none;
+        width: 100%;
+    }
+
+    .templatemo-header-left { height: 140px; }
+    .templatemo-header-right { height: 200px; }
+    .templatemo-header-text-wrap,
+    .templatemo-header-left-overlay { height: 100px; }
+    .templatemo-social { height: 40px; }
+
+    .templatemo-nav {
+        background: rgba(13, 27, 42, 0.95);
+        display: none;
+        position: fixed;
+        top: 50px;
+        right: 5px;
+        width: auto;
+        height: 300px;
+        overflow: auto;
+        z-index: 1000;
+    }
+
+    .templatemo-nav li {
+        display: block;
+        float: none;
+    }
+
+    .mobile-menu-icon {
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 5px;
+        z-index: 1000;
+    }
+
+    .mobile-menu-icon:hover .fa { background-color: var(--biru-utama); }
+
+    .mobile-menu-icon .fa {
+        color: var(--biru-terang);
+        background-color: rgba(13, 27, 42, 0.8);
+        font-size: 1.5em;
+        width: 40px;
+        height: 40px;
+        padding-top: 9px;
+        padding-left: 11px;
+    }
+
+    .kontak-detail {
+        padding: 0 0 20px 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h2 { font-size: 2.4em; }
+}
+
+@media screen and (max-width: 490px) {
+    .product-menu li { line-height: 39px; }
+
+    .product-menu a {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .product-menu a { padding: 10px; }
+}
